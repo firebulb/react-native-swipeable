@@ -261,7 +261,7 @@ export default class Swipeable extends PureComponent {
   _handlePan = Animated.event([null, {
     dx: this.state.pan.x,
     dy: this.state.pan.y
-  }], {useNativeDriver: true});
+  }], {useNativeDriver: false});
 
   _handleMoveShouldSetPanResponder = (event, gestureState) => {
     const {swipeStartMinDistance, swipeStartMinLeftEdgeClearance, swipeStartMinRightEdgeClearance} = this.props;
